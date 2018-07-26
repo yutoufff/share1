@@ -3,8 +3,9 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fafafa">
+    <!--头部导航栏-->
     <RelativeLayout
-        android:id="@+id/me_me"
+        android:id="@+id/me_navigation"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="vertical"
@@ -17,7 +18,9 @@
             android:layout_height="49dp"
             android:gravity="center"
             android:text="我的"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="serif"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -26,13 +29,16 @@
 
         </View>
     </RelativeLayout>
+
+
+    <!--职位收藏框-->
     <RelativeLayout
+        android:id="@+id/me_two"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_margin="15dp"
-        android:layout_below="@id/me_me"
-        android:background="#ffffff"
-        >
+        android:layout_below="@id/me_navigation"
+        android:background="#ffffff">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -51,23 +57,36 @@
                 android:text="职位收藏"
                 android:gravity="center"
                 android:layout_marginLeft="40dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:textStyle="bold"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_toRightOf="@+id/job_collect_image"
                 android:layout_height="0.5dp"
                 android:background="#BEBEBE"
-                android:layout_below="@id/job_collect_text">
+                android:layout_below="@id/job_collect_text"
+                android:id="@+id/view">
             </View>
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:src="@drawable/to_right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@+id/view" />
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/apply_record"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/job_collect">
+            <ImageView
+                android:id="@+id/apply_record_image"
+                android:layout_width="32dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_love"
+                />
             <TextView
                 android:id="@+id/apply_record_text"
                 android:layout_width="wrap_content"
@@ -75,21 +94,36 @@
                 android:text="申请记录"
                 android:gravity="center"
                 android:layout_marginLeft="40dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:textStyle="bold"/>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_toRightOf="@+id/apply_record_image"
+                android:layout_height="0.5dp"
                 android:background="#BEBEBE"
-                android:layout_below="@id/apply_record_text">
-
+                android:layout_below="@id/apply_record_text"
+                android:id="@+id/view2">
             </View>
-
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:src="@drawable/to_right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@+id/view2" />
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/not_watch"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/apply_record">
+            <ImageView
+            android:id="@+id/not_watch_image"
+            android:layout_width="32dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icon_love"
+            />
             <TextView
                 android:id="@+id/not_watch_text"
                 android:layout_width="wrap_content"
@@ -97,14 +131,193 @@
                 android:text="不让改公司看我的简历"
                 android:gravity="center"
                 android:layout_marginLeft="40dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:textStyle="bold"/>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_toRightOf="@+id/not_watch_image"
+                android:layout_height="0.5dp"
                 android:background="#BEBEBE"
-                android:layout_below="@id/not_watch_text">
-
+                android:layout_below="@id/not_watch_text"
+                android:id="@+id/view3">
             </View>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:src="@drawable/to_right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@+id/view3" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--增值服务框-->
+    <RelativeLayout
+        android:id="@+id/me_three"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="15dp"
+        android:layout_below="@id/me_two"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/me_three_vip">
+            <ImageView
+                android:id="@+id/me_three_vip_image"
+                android:layout_width="32dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_love"
+                />
+            <TextView
+                android:id="@+id/me_three_vip_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="增值服务"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/me_three_vip_image"
+                android:layout_height="0.5dp"
+                android:background="#BEBEBE"
+                android:layout_below="@id/me_three_vip_text"
+                android:id="@+id/view4">
+            </View>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:src="@drawable/to_right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@+id/view4" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/me_three_salary_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/me_three_vip">
+            <ImageView
+                android:id="@+id/me_three_salary_search_image"
+                android:layout_width="32dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_love"
+                />
+            <TextView
+                android:id="@+id/me_three_salary_search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="薪酬查询"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/me_three_salary_search_image"
+                android:layout_height="0.5dp"
+                android:background="#BEBEBE"
+                android:layout_below="@id/me_three_salary_search_text"
+                android:id="@+id/view5">
+            </View>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:src="@drawable/to_right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@+id/view5" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--用户反馈和设置-->
+    <RelativeLayout
+        android:id="@+id/me_four"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="15dp"
+        android:layout_below="@id/me_three"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/me_four_help">
+            <ImageView
+                android:id="@+id/me_four_help_image"
+                android:layout_width="32dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_love"
+                />
+            <TextView
+                android:id="@+id/me_four_help_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="用户反馈和帮助"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/me_four_help_image"
+                android:layout_height="0.5dp"
+                android:background="#BEBEBE"
+                android:layout_below="@id/me_four_help_text"
+                android:id="@+id/view6">
+            </View>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:src="@drawable/to_right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@+id/view6" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/me_three_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/me_four_help">
+            <ImageView
+                android:id="@+id/me_four_setting_image"
+                android:layout_width="32dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_love" />
+            <TextView
+                android:id="@+id/me_four_setting_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="设置"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/me_four_setting_image"
+                android:layout_height="0.5dp"
+                android:background="#BEBEBE"
+                android:layout_below="@id/me_four_setting_text"
+                android:id="@+id/view7">
+            </View>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="2dp"
+                android:src="@drawable/to_right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@+id/view7" />
         </RelativeLayout>
 
     </RelativeLayout>
