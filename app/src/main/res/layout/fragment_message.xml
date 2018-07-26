@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--消息页头部导航栏-->
+    <RelativeLayout
+        android:id="@+id/find_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        >
+
+        <TextView
+            android:id="@+id/find_navigation_text"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:gravity="center"
+            android:text="消息"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="serif"/>
+        <TextView
+            android:id="@+id/find_navigation_text_read_messages"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:text="全部已读"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#EE7621"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/view8" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BEBEBE"
+            android:layout_below="@id/find_navigation_text"
+            android:id="@+id/view8">
+        </View>
+    </RelativeLayout>
+    <!--谁看过我-->
+    <RelativeLayout
+        android:id="@+id/me_two"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_margin="15dp"
+        android:layout_below="@id/me_navigation"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/job_collect">
+            <ImageView
+                android:id="@+id/job_collect_image"
+                android:layout_width="32dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_love"
+                />
+            <TextView
+                android:id="@+id/job_collect_text"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="谁看过我"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/job_collect_image"
+                android:layout_height="0.5dp"
+                android:background="#BEBEBE"
+                android:layout_below="@id/job_collect_text"
+                android:id="@+id/view">
+            </View>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/apply_record"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/job_collect">
+            <ImageView
+                android:id="@+id/apply_record_image"
+                android:layout_width="32dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_love"
+                />
+            <TextView
+                android:id="@+id/apply_record_text"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="人事来往"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/apply_record_image"
+                android:layout_height="0.5dp"
+                android:background="#BEBEBE"
+                android:layout_below="@id/apply_record_text"
+                android:id="@+id/view2">
+            </View>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/not_watch"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/apply_record">
+            <ImageView
+                android:id="@+id/not_watch_image"
+                android:layout_width="32dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_love"
+                />
+            <TextView
+                android:id="@+id/not_watch_text"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="职场Live"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_toRightOf="@+id/not_watch_image"-->
+                <!--android:layout_height="0.5dp"-->
+                <!--android:background="#BEBEBE"-->
+                <!--android:layout_below="@id/not_watch_text"-->
+                <!--android:id="@+id/view3">-->
+            <!--</View>-->
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fafafa">
-    <!--头部导航栏-->
+    <!--我的页面头部导航栏-->
     <RelativeLayout
         android:id="@+id/me_navigation"
         android:layout_width="match_parent"

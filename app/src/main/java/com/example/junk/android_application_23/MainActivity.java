@@ -9,13 +9,17 @@ import android.widget.LinearLayout;
 import com.example.junk.android_application_23.fragment.FindFragment;
 import com.example.junk.android_application_23.fragment.MainFragment;
 import com.example.junk.android_application_23.fragment.MeFragment;
+import com.example.junk.android_application_23.fragment.MessageFragment;
 
  public class MainActivity extends AppCompatActivity implements View.OnClickListener{
      protected LinearLayout mMenuMain;
      protected LinearLayout mMenuFind;
+     protected LinearLayout mMenuMessage;
      protected LinearLayout mMenuMe;
+
     protected MainFragment mMainFragment =new MainFragment();  //首页
      protected FindFragment mFindFragment=new FindFragment();  //发现
+     protected MessageFragment mMessageFragment=new MessageFragment();// 消息页
      protected MeFragment mMeFragment=new MeFragment();        //我的
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +30,11 @@ import com.example.junk.android_application_23.fragment.MeFragment;
         //获取fragment管理类
         this.getSupportFragmentManager()
                 .beginTransaction()
-            .add(R.id.container_content,mMainFragment)
+                .add(R.id.container_content,mMainFragment)
                 .add(R.id.container_content,mFindFragment)
                 .hide(mFindFragment)
+                .add(R.id.container_content,mMessageFragment)
+                .hide(mMessageFragment)
                 .add(R.id.container_content,mMeFragment)
                 .hide(mMeFragment)
 
@@ -43,10 +49,12 @@ import com.example.junk.android_application_23.fragment.MeFragment;
      private void initView() {
          mMenuMain= (LinearLayout) this.findViewById(R.id.menu_main);
          mMenuFind= (LinearLayout) this.findViewById(R.id.menu_find);
+         mMenuMessage= (LinearLayout) this.findViewById(R.id.menu_message);
          mMenuMe= (LinearLayout) this.findViewById(R.id.menu_me);
 
         mMenuMain.setOnClickListener(this);
         mMenuFind.setOnClickListener(this);
+         mMenuMessage.setOnClickListener(this);
         mMenuMe.setOnClickListener(this);
 
      }
@@ -60,6 +68,7 @@ import com.example.junk.android_application_23.fragment.MeFragment;
                          .beginTransaction()
                          .show(mMainFragment)
                          .hide(mFindFragment)
+                         .hide(mMessageFragment)
                          .hide(mMeFragment)
                          .commit();
                  break;
@@ -68,6 +77,16 @@ import com.example.junk.android_application_23.fragment.MeFragment;
                          .beginTransaction()
                          .hide(mMainFragment)
                          .show(mFindFragment)
+                         .hide(mMessageFragment)
+                         .hide(mMeFragment)
+                         .commit();
+                 break;
+             case R.id.menu_message:
+                 this.getSupportFragmentManager()
+                         .beginTransaction()
+                         .hide(mMainFragment)
+                         .hide(mFindFragment)
+                         .show(mMessageFragment)
                          .hide(mMeFragment)
                          .commit();
                  break;
@@ -76,6 +95,7 @@ import com.example.junk.android_application_23.fragment.MeFragment;
                          .beginTransaction()
                          .hide(mMainFragment)
                          .hide(mFindFragment)
+                         .hide(mMessageFragment)
                          .show(mMeFragment)
                          .commit();
                  break;
