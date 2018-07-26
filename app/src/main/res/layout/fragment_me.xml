@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa">
+    <RelativeLayout
+        android:id="@+id/me_me"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        >
+
+        <TextView
+            android:id="@+id/me_me_me"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:gravity="center"
+            android:text="我的"
+            android:textSize="20sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BEBEBE"
+            android:layout_below="@id/me_me_me">
+
+        </View>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="15dp"
+        android:layout_below="@id/me_me"
+        android:background="#ffffff"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/job_collect">
+            <ImageView
+                android:id="@+id/job_collect_image"
+                android:layout_width="32dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_love"
+                />
+            <TextView
+                android:id="@+id/job_collect_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="职位收藏"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:textSize="15sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/job_collect_image"
+                android:layout_height="0.5dp"
+                android:background="#BEBEBE"
+                android:layout_below="@id/job_collect_text">
+            </View>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/apply_record"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/job_collect">
+            <TextView
+                android:id="@+id/apply_record_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="申请记录"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:textSize="15sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BEBEBE"
+                android:layout_below="@id/apply_record_text">
+
+            </View>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/not_watch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/apply_record">
+            <TextView
+                android:id="@+id/not_watch_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="不让改公司看我的简历"
+                android:gravity="center"
+                android:layout_marginLeft="40dp"
+                android:textSize="15sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BEBEBE"
+                android:layout_below="@id/not_watch_text">
+
+            </View>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
