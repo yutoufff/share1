@@ -3,5 +3,120 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--搜索部分-->
+    <LinearLayout
+        android:id="@+id/saoyisao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/main_scan" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫一扫"
+            />
+
+    </LinearLayout>
+    <!--搜索-->
+    <LinearLayout
+        android:id="@+id/sousuo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@+id/saoyisao"
+        android:layout_marginLeft="10dp"
+
+
+        >
+
+
+
+        <EditText
+            android:drawableLeft="@mipmap/search"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:hint="找公司/找职位"
+            />
+
+    </LinearLayout>
+
+    <!--消息-->
+    <LinearLayout
+        android:id="@+id/news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/sousuo"
+        android:layout_marginLeft="10dp"
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息" />
+
+    </LinearLayout>
+
+
+    <!--控件部分-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_JobSearch"
+            android:text="职位搜索"
+            android:layout_below="@+id/saoyisao"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_WhoSawMe"
+            android:text="谁看过我"
+            android:layout_toRightOf="@+id/button_JobSearch"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_JobSearch"
+            android:text="申请记录"
+            android:layout_below="@+id/saoyisao"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_WhoSawMe"
+            android:text="校园招聘"
+            android:layout_toRightOf="@+id/button_JobSearch"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_WhoSawMe"
+            android:text="求职攻略"
+            android:layout_toRightOf="@+id/button_JobSearch"
+            />
+
+    </RelativeLayout>
+
+    <!--滚动部分-->
+
 
 </RelativeLayout>

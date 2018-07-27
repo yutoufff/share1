@@ -17,7 +17,7 @@ import com.example.junk.android_application_23.fragment.MessageFragment;
      protected LinearLayout mMenuMessage;
      protected LinearLayout mMenuMe;
 
-    protected MainFragment mMainFragment =new MainFragment();  //首页
+     protected MainFragment mMainFragment =new MainFragment();  //首页
      protected FindFragment mFindFragment=new FindFragment();  //发现
      protected MessageFragment mMessageFragment=new MessageFragment();// 消息页
      protected MeFragment mMeFragment=new MeFragment();        //我的
