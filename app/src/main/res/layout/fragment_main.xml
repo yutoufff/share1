@@ -83,7 +83,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/button_JobSearch"
             android:text="职位搜索"
-            android:layout_below="@+id/saoyisao"/>
+            android:layout_alignLeft="@+id/saoyisao"
+
+
+            />
 
         <Button
             android:layout_width="wrap_content"
@@ -95,27 +98,27 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button_JobSearch"
+            android:id="@+id/button_Application_Record"
             android:text="申请记录"
-            android:layout_below="@+id/saoyisao"/>
+            android:layout_toRightOf="@+id/button_WhoSawMe"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button_WhoSawMe"
+            android:id="@+id/button_Campus_Recruiting"
             android:text="校园招聘"
-            android:layout_toRightOf="@+id/button_JobSearch"
+            android:layout_toRightOf="@+id/button_Application_Record"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button_WhoSawMe"
+            android:id="@+id/button_Job_Search_Strategy"
             android:text="求职攻略"
-            android:layout_toRightOf="@+id/button_JobSearch"
+            android:layout_toRightOf="@+id/button_Campus_Recruiting"
             />
 
     </RelativeLayout>
-
+//asdf
     <!--滚动部分-->
 
 
